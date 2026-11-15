@@ -1,0 +1,34 @@
+{
+  "canon_version": "v3",
+  "backgrounds": [
+    {
+      "id": "classroom_interior",
+      "locked": true,
+      "depth_layers": [
+        "far_windows_with_blinking_emergency_lights_and_smoke",
+        "mid_chalkboard_desks_and_flickering_tv_screen",
+        "foreground_student_desk_and_smartphone_notification"
+      ],
+      "live_displays": ["tv_emergency_broadcast_signal", "phone_lock_screen_alert"],
+      "default_lighting": "emergency_amber",
+      "recurring_props": [
+        { "id": "cracked_smartphone", "pos": [0.65, 0.72] },
+        { "id": "tv_broadcast_banner", "pos": [0.5, 0.15] }
+      ]
+    },
+    {
+      "id": "classroom_door_view",
+      "locked": true,
+      "depth_layers": [
+        "far_hallway_red_emergency_strobe_through_door_glass",
+        "mid_reinforced_steel_door_and_electronic_lock_panel",
+        "foreground_wooden_school_desks_ready_to_push"
+      ],
+      "live_displays": ["door_lock_status_indicator"],
+      "default_lighting": "alarm_red",
+      "recurring_props": [
+        { "id": "electronic_lock_panel", "pos": [0.78, 0.48] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "bell-zero-reels",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BELL ZERO - animated survival story reels (Remotion engine, contract v3)",
+  "scripts": {
+    "validate": "python3 scripts/validate.py episodes/episode_1.json",
+    "audio": "python3 scripts/make_audio.py episodes/episode_1.json",
+    "qa": "bash scripts/qa_sheet.sh 1",
+    "studio": "remotion studio src/index.ts",
+    "render": "bash scripts/render.sh 1",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.543",
+    "@remotion/cli": "4.0.543",
+    "@remotion/google-fonts": "4.0.543",
+    "@remotion/media-utils": "4.0.543",
+    "@remotion/renderer": "4.0.543",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "typescript": "5.5.4"
+  }
+}

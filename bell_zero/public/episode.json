@@ -1,0 +1,261 @@
+{
+  "contract_version": "v3",
+  "meta": {
+    "day": 1,
+    "series": "BELL ZERO",
+    "title": "LOCKDOWN",
+    "language": "en",
+    "duration_target_s": 77,
+    "episode": 1
+  },
+  "voice": {
+    "provider": "elevenlabs",
+    "voice_profile": "teen_tense_narrator",
+    "pacing": "measured_hook_urgent_mid_tense_end"
+  },
+  "hud": {
+    "clock_start": "14:15",
+    "counters": [
+      {
+        "id": "battery",
+        "label": "PHONE BATTERY",
+        "value": "98%",
+        "events": [
+          { "t": 32.0, "value": "85%" },
+          { "t": 62.0, "value": "72%" }
+        ]
+      },
+      {
+        "id": "infected",
+        "label": "OUTSIDE",
+        "value": "0",
+        "events": [
+          { "t": 18.0, "value": "14" },
+          { "t": 45.0, "value": "89" }
+        ]
+      },
+      {
+        "id": "lockdown",
+        "label": "STATUS",
+        "value": "NORMAL",
+        "events": [
+          { "t": 22.0, "value": "QUARANTINE" }
+        ]
+      }
+    ]
+  },
+  "hero_choice": {
+    "t": 58.0,
+    "summary": "triggers the electronic door lock just as Miss Harper reaches the hallway glass"
+  },
+  "foreshadow_planted": {
+    "item": "emergency_broadcast_signal_code_77",
+    "pays_off_episode": 3
+  },
+  "scenes": [
+    {
+      "id": "scene_01_hook",
+      "type": "control_panel",
+      "t": [0.0, 8.0],
+      "lighting": "night_cold",
+      "atmosphere": { "fog": 0.2, "particles": "dust_motes", "dof": "shallow", "detail_density": "high" },
+      "bg_monitors": [
+        { "id": "tv_screen", "content": "emergency_broadcast_signal", "status": "warning" },
+        { "id": "phone_screen", "content": "phone_lock_screen_alert", "status": "danger" }
+      ],
+      "camera": { "move": "push_in", "from": 1.0, "to": 1.25, "easing": "easeInOut" },
+      "bg": "classroom_interior",
+      "labels": [
+        { "t": 2.2, "text": "ALERT: LEVEL 4", "anchor": [0.5, 0.22] }
+      ],
+      "characters": [
+        { "rig": "hero_student_m", "pos": [0.5, 0.65], "action": "inspect", "emotion": "worried", "props": ["smartphone"] }
+      ],
+      "vo": "When every phone in the classroom buzzed at once during a history test, nobody knew it was the end of the world.",
+      "subs": [
+        { "t": 0.3, "words": [{ "w": "When every phone buzzed,", "color": "white" }, { "w": "the end of the world.", "color": "red" }] }
+      ],
+      "sfx": [
+        { "t": 1.2, "id": "phone_ring" },
+        { "t": 7.4, "id": "riser_low" }
+      ]
+    },
+    {
+      "id": "scene_02_tv_broadcast",
+      "type": "establishing",
+      "t": [8.0, 20.0],
+      "lighting": "emergency_amber",
+      "atmosphere": { "fog": 0.35, "particles": "dust_motes", "dof": "medium", "detail_density": "high" },
+      "bg_monitors": [
+        { "id": "tv_screen", "content": "emergency_broadcast_signal", "status": "danger" }
+      ],
+      "camera": { "move": "pan_l", "from": 1.1, "to": 1.2, "easing": "easeInOut" },
+      "bg": "classroom_interior",
+      "labels": [
+        { "t": 12.0, "text": "CODE 77: BIO-THREAT", "anchor": [0.45, 0.18] },
+        { "t": 18.0, "text": "14 HOSTILES SPOTTED", "anchor": [0.65, 0.42] }
+      ],
+      "characters": [
+        { "rig": "teacher_harper", "pos": [0.35, 0.62], "action": "point", "emotion": "afraid", "props": ["class_roster"] },
+        { "rig": "hero_student_m", "pos": [0.68, 0.66], "action": "idle", "emotion": "worried", "props": ["smartphone"] }
+      ],
+      "vo": "The wall television hijacked itself with a crimson military banner. Outside the second-floor window, fourteen students were already sprinting across the yard—not running away, but chasing the ones who fell.",
+      "subs": [
+        { "t": 8.4, "words": [{ "w": "A crimson military banner.", "color": "red" }] },
+        { "t": 14.2, "words": [{ "w": "Fourteen students", "color": "yellow" }, { "w": "chasing the ones who fell.", "color": "red" }] }
+      ],
+      "sfx": [
+        { "t": 8.5, "id": "static_burst" },
+        { "t": 18.0, "id": "ui_pop" }
+      ]
+    },
+    {
+      "id": "scene_03_lockdown_starts",
+      "type": "cellblock",
+      "t": [20.0, 34.0],
+      "lighting": "alarm_red",
+      "atmosphere": { "fog": 0.4, "particles": "ash_drift", "dof": "medium", "detail_density": "high" },
+      "bg_monitors": [
+        { "id": "door_lock_status_indicator", "content": "lockdown_engaged", "status": "danger" }
+      ],
+      "camera": { "move": "punch_zoom", "from": 1.0, "to": 1.3, "easing": "easeOut" },
+      "bg": "classroom_door_view",
+      "labels": [
+        { "t": 22.0, "text": "AUTO-LOCKDOWN ENGAGED", "anchor": [0.5, 0.3] }
+      ],
+      "characters": [
+        { "rig": "teacher_harper", "pos": [0.42, 0.64], "action": "walk", "emotion": "panicked", "props": ["keys"] }
+      ],
+      "vo": "At fourteen-thirty-seven, heavy steel shutters slammed down over the main exits. Miss Harper grabbed her keys and stepped into the hallway to check the corridor, leaving the classroom door unlatched.",
+      "subs": [
+        { "t": 20.5, "words": [{ "w": "Heavy steel shutters", "color": "yellow" }, { "w": "slammed down.", "color": "red" }] },
+        { "t": 28.0, "words": [{ "w": "Leaving the door", "color": "white" }, { "w": "unlatched.", "color": "red" }] }
+      ],
+      "sfx": [
+        { "t": 22.0, "id": "door_slam" },
+        { "t": 25.0, "id": "alarm" },
+        { "t": 30.0, "id": "key_jingle" }
+      ]
+    },
+    {
+      "id": "scene_04_hallway_chaos",
+      "type": "cctv_insert",
+      "t": [34.0, 48.0],
+      "lighting": "cctv_green",
+      "atmosphere": { "fog": 0.45, "particles": "dust_motes", "dof": "deep", "detail_density": "high" },
+      "bg_monitors": [
+        { "id": "phone_screen", "content": "school_cctv_feed", "status": "danger" }
+      ],
+      "camera": { "move": "drift", "from": 1.05, "to": 1.22, "easing": "linear" },
+      "bg": "classroom_interior",
+      "labels": [
+        { "t": 45.0, "text": "PERIMETER BREACHED: 89", "anchor": [0.5, 0.25] }
+      ],
+      "characters": [
+        { "rig": "hero_student_m", "pos": [0.52, 0.65], "action": "inspect", "emotion": "afraid", "props": ["smartphone"] }
+      ],
+      "vo": "Alex pulled up the school security feed on his phone. The east gate had collapsed. Eighty-nine infected were flooding the ground floor, and screams echoed up the stairwell.",
+      "subs": [
+        { "t": 34.5, "words": [{ "w": "The east gate", "color": "white" }, { "w": "had collapsed.", "color": "red" }] },
+        { "t": 42.0, "words": [{ "w": "Eighty-nine infected", "color": "red" }, { "w": "flooding the floor.", "color": "white" }] }
+      ],
+      "sfx": [
+        { "t": 35.0, "id": "static_burst" },
+        { "t": 44.5, "id": "crowd_murmur" },
+        { "t": 45.0, "id": "ui_pop" }
+      ]
+    },
+    {
+      "id": "scene_05_hero_choice",
+      "type": "reveal_closeup",
+      "t": [48.0, 62.0],
+      "lighting": "alarm_red",
+      "atmosphere": { "fog": 0.35, "particles": "sparks", "dof": "shallow", "detail_density": "high" },
+      "bg_monitors": [
+        { "id": "door_lock_status_indicator", "content": "manual_override_ready", "status": "warning" }
+      ],
+      "camera": { "move": "push_in", "from": 1.0, "to": 1.38, "easing": "easeInOut" },
+      "bg": "classroom_door_view",
+      "labels": [
+        { "t": 58.0, "text": "DOOR SEALED", "anchor": [0.75, 0.45] }
+      ],
+      "characters": [
+        { "rig": "hero_student_m", "pos": [0.58, 0.64], "action": "point", "emotion": "determined", "props": [] },
+        { "rig": "teacher_harper", "pos": [0.28, 0.62], "action": "shock", "emotion": "afraid", "props": [] }
+      ],
+      "vo": "Shadows lunged down the corridor toward Miss Harper. She sprinted back, reaching for the handle—but a pale figure was right behind her shoulder. With a shaking hand, Alex hit the magnetic deadbolt.",
+      "subs": [
+        { "t": 48.5, "words": [{ "w": "Shadows lunged", "color": "red" }, { "w": "toward Miss Harper.", "color": "white" }] },
+        { "t": 57.5, "words": [{ "w": "Alex hit the", "color": "white" }, { "w": "magnetic deadbolt.", "color": "yellow" }] }
+      ],
+      "sfx": [
+        { "t": 54.0, "id": "heartbeat" },
+        { "t": 58.0, "id": "door_slam" }
+      ]
+    },
+    {
+      "id": "scene_06_cliffhanger_setup",
+      "type": "dialogue_call",
+      "t": [62.0, 69.0],
+      "lighting": "night_cold",
+      "atmosphere": { "fog": 0.3, "particles": "dust_motes", "dof": "shallow", "detail_density": "high" },
+      "bg_monitors": [],
+      "camera": { "move": "pan_r", "from": 1.15, "to": 1.25, "easing": "easeOut" },
+      "bg": "classroom_door_view",
+      "labels": [
+        { "t": 64.0, "text": "HALLWAY: CLEAR?", "anchor": [0.35, 0.35] }
+      ],
+      "characters": [
+        { "rig": "hero_student_m", "pos": [0.55, 0.65], "action": "shock", "emotion": "afraid", "props": [] }
+      ],
+      "vo": "The heavy lock clicked shut. Suddenly, the screaming stopped. Three slow knocks echoed on the reinforced glass—and Miss Harper whispered his name.",
+      "subs": [
+        { "t": 62.4, "words": [{ "w": "Three slow knocks", "color": "yellow" }, { "w": "on the glass.", "color": "white" }] }
+      ],
+      "sfx": [
+        { "t": 65.0, "id": "metal_creak" },
+        { "t": 68.2, "id": "riser_low" }
+      ]
+    },
+    {
+      "id": "scene_07_ending_card",
+      "type": "ending_card",
+      "t": [69.0, 77.0],
+      "lighting": "alarm_red",
+      "atmosphere": { "fog": 0.5, "particles": "none", "dof": "shallow", "detail_density": "high" },
+      "bg_monitors": [],
+      "camera": { "move": "drift", "from": 1.0, "to": 1.05, "easing": "linear" },
+      "bg": "classroom_door_view",
+      "labels": [],
+      "characters": [],
+      "vo": "Is she still human, or is it a trap? What should Alex do?",
+      "subs": [
+        { "t": 69.5, "words": [{ "w": "Is she still human?", "color": "red" }] }
+      ],
+      "sfx": [
+        { "t": 70.0, "id": "heartbeat" }
+      ]
+    }
+  ],
+  "ending": {
+    "question": [
+      { "line": "DOOR IS LOCKED.", "color": "white" },
+      { "line": "IS SHE INFECTED?", "color": "red" }
+    ],
+    "poll": {
+      "prompt": "WHAT SHOULD ALEX DO?",
+      "options": [
+        { "n": 1, "title": "UNLOCK", "sub": "open door for Miss Harper" },
+        { "n": 2, "title": "BARRICADE", "sub": "block door with desks" }
+      ]
+    },
+    "cta": "WRITE YOUR ANSWER IN THE COMMENTS",
+    "teaser": { "kicker": "BELL ZERO", "title": "DAY 1", "sub": "LESSON 2" }
+  },
+  "state_after": {
+    "counters": { "battery": "72%", "infected": "89", "lockdown": "QUARANTINE" },
+    "npcs": [ { "id": "teacher_harper", "status": "locked_outside_door_status_unknown" } ],
+    "open_holes": [ "why cellular towers are still broadcasting automated military loops" ],
+    "foreshadow_open": [ { "item": "emergency_broadcast_signal_code_77", "pays_off_episode": 3 } ]
+  }
+}

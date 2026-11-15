@@ -1,0 +1,16 @@
+{
+  "series": "BELL ZERO",
+  "canon_version": "v3",
+  "art_style": "detailed_graphic_novel_2_5d_cel_shaded",
+  "canvas": { "w": 1080, "h": 1920, "fps": 30 },
+  "safe_zones_px": { "top": 150, "bottom": 460, "side": 60 },
+  "voice": {
+    "provider": "elevenlabs",
+    "voice_profile": "teen_tense_narrator",
+    "voice_id": "REPLACE_WITH_LOCKED_VOICE_ID",
+    "model_id": "eleven_multilingual_v2",
+    "settings": { "stability": 0.45, "similarity_boost": 0.80, "style": 0.40, "use_speaker_boost": true },
+    "fallback_edge_tts": "en-US-GuyNeural"
+  },
+  "mix": { "vo_lufs": -14, "sfx_db": -6, "duck_db": -6, "ambient_db": -24 }
+}

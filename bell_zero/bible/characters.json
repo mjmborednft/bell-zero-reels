@@ -1,0 +1,38 @@
+{
+  "canon_version": "v3",
+  "art_style": "detailed_graphic_novel_2_5d_cel_shaded",
+  "characters": [
+    {
+      "id": "hero_student_m",
+      "locked": true,
+      "role": "protagonist",
+      "display_name": "Alex Mercer",
+      "anatomy": "realistic_teen_proportions",
+      "facial_detail": ["determined_eyes", "scruffy_hair", "scar_above_lip"],
+      "outfit_layers": ["dark_slate_hoodie", "school_backpack", "silver_pendant"],
+      "palette": {
+        "uniform": "#4a5568",
+        "hoodie": "#2d3748",
+        "skin": "#e2e8f0",
+        "accent": "#e53e3e"
+      },
+      "props": ["smartphone", "notebook", "desk_pen"]
+    },
+    {
+      "id": "teacher_harper",
+      "locked": true,
+      "role": "npc",
+      "display_name": "Miss Harper",
+      "anatomy": "realistic_adult_proportions_7_5_heads",
+      "facial_detail": ["panicked_eyes", "tied_bun_hair", "glasses_crooked"],
+      "outfit_layers": ["tweed_blazer", "white_blouse", "lanyard_id"],
+      "palette": {
+        "uniform": "#5a4a42",
+        "blouse": "#edf2f7",
+        "skin": "#d9a78b",
+        "accent": "#e53e3e"
+      },
+      "props": ["class_roster", "keys"]
+    }
+  ]
+}
